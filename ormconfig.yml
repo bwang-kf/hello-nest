@@ -1,0 +1,11 @@
+default: 
+    type: "postgres"
+    host: "localhost"
+    port: 5432
+    username: "postgres"
+    password: "password"
+    database: "postgres"
+    entities: ["src/**/**.entity{.ts,.js}"]
+    # schema: default is "public"
+    # synchronize: false otherwise auto created on every application launch. 
+    # As an alternative to it, use CLI and run schema:sync command
