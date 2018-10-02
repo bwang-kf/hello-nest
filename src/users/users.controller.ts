@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Param, Body, Put, Delete } from '@nestjs/common';
-import { UserCreateDto } from 'dto/user-create-dto';
+import { UserCreateDto } from 'users/dto/user-create-dto';
 import { identity } from 'rxjs';
-import { UsersService } from 'service/users.service';
+import { UsersService } from 'users/users.service';
 
 @Controller('users')
 export class UsersController {
