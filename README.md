@@ -79,6 +79,14 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
   Nest is [MIT licensed](LICENSE).
 
 ## Notes on Docker
+### Option 1: Use docker-compose
+```bash
+$ docker-compose up
+
+# or run in background
+$ docker-compose up -d
+```
+### Options 2: Individual container
 ```bash
 # create a Postgres docker with data persistence
 $ docker volume create postgres-data
@@ -97,4 +105,16 @@ $ docker stop container_id
 
 # restart
 $ docker start container_id
+```
+## Notes on typeorm
+```bash
+# this doesn't work with .ts
+$ typeorm schema:sync
+
+# run .ts file through ts-node works
+# check what sql is going to run during schema:sync
+$ ./node_modules/.bin/ts-node ./node_modules/.bin/typeorm schema:log
+
+# run schema:sync
+./node_modules/.bin/ts-node ./node_modules/.bin/typeorm schema:sync
 ```
